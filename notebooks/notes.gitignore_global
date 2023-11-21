@@ -1,0 +1,29 @@
+# Summary of major changes during data cleaning:
+# Table all_comments: 
+# dropped columns: 'body', 'rawBody', 'name', 'anonymous', 'user', 'comments', 'isAlumni', 'createdAt', 'hostProgramName', 'overall', 'curriculum', 'job_support'
+# changed datatype: "queryDate", "overallScore", "overall", "curriculum",  "jobSupport"
+# replaced some of the missing values in "program" by borrowing the data from "hostProgramName"
+# generated "query_year" from 'queryDate'
+# created another column with the more generalized program name 'program_category' by using both 'jobTitle' and 'program'
+# created another column 'full_part_time"
+# cleanned colomn 'jobTitle'
+# renamed the rest of the columns as 'id', 'job_title', 'tagline', 'program', 'query_date', 'total_score', , 'review_body', 'school','full_part_time','program_category'
+
+# Table all_locations:
+# dropped columns: 'country.id',  'city.id', 'state.id', 'city.keyword','country.abbrev', 'state.abbrev', 'state.keyword', 'state_name', 'description'
+# filled the missing locations in 'country_name' and 'city_name' with value "Online"
+# renamed the rest of columns as: 'id', 'description', 'country_name', 'city_name', 'state_name', 'school', 'school_id'
+
+# Table courses: No change
+
+# Table Badges:
+# removed tags from 'description' and created another column 'new_description'
+# dropped columns: 'description', 'keyword', 
+
+# Table Schools:
+# dropped columns: 'LogoUrl', 'description', 
+# removed tags from 'description' and created another column 'new_description'
+# renamed the rest of the columns as: 'website', 'school', 'school_id', 'new_description'
+
+# Table Job_data:
+# Web Scraping from Linked in with the most resent job posts
